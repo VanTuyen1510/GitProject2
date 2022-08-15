@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        img.big {
+            width: 100%;
+            height: 270px;
+        }
+
+        .headerB ul li:last-child::after {
+            content: "☰";
+            margin-left: 5px;
+            color: #757575;
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            border-bottom: 1px solid #757575;
+        }
+
+        .pd {
+            padding: 10px;
+        }
+
+        .mg-left {
+            margin-left: 100px;
+        }
+
+        #header span {
+            margin: 0px 467px 0px 25px;
+            color: #757575;
+            border-left: 1px solid #757575;
+
+        }
+
+        #header a.title {
+            border: 1px solid #757575;
+            border-radius: 5%;
+            color: #757575;
+            padding: 5px
+        }
+
+        #header a.title:hover {
+            background-color: #d3cece;
+        }
+
+        #header a.login {
+            color: #757575;
+            margin-left: 15px;
+        }
+
+        #header a.login:hover {
+            color: #3498db;
+        }
+
+        #header input {
+            border-radius: 10px;
+            margin-left: 20px;
+        
+        }
+       
+
+        #header a.login::before {
+            content: '👤';
+            color: #757575;
+            margin-right: 5px;
+
+        }
+
+        div.headerB {
+            border-top: 1px solid #757575;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .headerB ul li:last-child {
+            color: #757575;
+        }
+
+        .headerB ul {
+            margin-left: 10px;
+        }
+
+        ul li {
+            display: inline-block;
+            font-weight: bold;
+            position: relative;
+            padding: 0px 8px;
+
+
+        }
+
+
+        .headerB ul li:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        ul li:hover ul {
+            /*hien thi ra*/
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            width: 200px;
+            padding: 20px 0px;
+            color: #757575;
+        }
+
+        ul li ul {
+
+
+            /*//k hien thi*/
+            display: none;
+        }
+
+        ul li ul li {
+            display: block;
+            text-align: left;
+            border-top: 1px solid #3498db;
+        }
+
+        #wp-content {
+            width: 1100px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .title {
+            width: 100%;
+            border-bottom: 1px solid #757575;
+
+
+        }
+
+        div.titleA {
+            width: 780px;
+            overflow: hidden;
+            background-color: #f7f7f7;
+        }
+
+        div.titleA img {
+            float: left;
+            width: 520px;
+            margin-right: 10px;
+        }
+
+        .titleB ul.titleB {
+            width: 780px;
+            display: flex;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .titleB ul.titleB li {
+            flex-basis: 33%;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .titleB ul.titleBli:last-child {
+            border-left: 1px solid gray;
+        }
+
+        .titleB ul.titleB li span {
+            color: #9f224e;
+        }
+
+        .titleB ul.titleB li h3:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 100%;
+            border-bottom: 1px solid #757575;
+
+
+        }
+
+        .contentA {
+            width: 380px;
+            float: left;
+        }
+
+        h4.pin:before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50px;
+            background-color: #757575;
+            margin-right: 10px;
+        }
+
+        .contentA ul li {
+            text-align: left;
+            font-weight: normal;
+            padding: 10px;
+            border-bottom: 1px solid #757575;
+
+        }
+
+        .contentA ul li h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .contentA ul li img {
+            float: left;
+            width: 145px;
+            margin-right: 10px;
+        }
+
+        ul li h3:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        div.contentB {
+            width: 700px;
+            float: right;
+            border-left: 1px solid #757575;
+            margin-right: 10px;
+
+        }
+
+        .businessA ul {
+            text-align: left;
+        }
+
+        .businessB ul li {
+            text-align: left;
+            font-weight: normal;
+            font-size: 15px;
+        }
+
+        .business {
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+        }
+
+        .businessB {
+            padding: 10px;
+            padding-bottom: 10px;
+        }
+
+        .businessB1 {
+            width: 450px;
+            float: left;
+            border-right: 1px solid #757575;
+        }
+
+        .businessB2 {
+            width: 219px;
+            float: right;
+
+        }
+
+        .businessB1 img {
+            float: left;
+            width: 225px;
+            margin-right: 10px;
+        }
+
+        div.businessC ul li {
+            width: 200px;
+        }
+
+        .businessC {
+            width: 100%;
+            border-top: 1px solid #757575;
+            padding: 10px 0px;
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid #757575;
+        }
+
+        ul li:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        .businessA ul li:first-child {
+            border-bottom: 1px solid #9f224e;
+            font-weight: bold;
+        }
+
+        .businessA ul li {
+            font-weight: normal;
+            text-align: justify;
+            padding: 10px 10px;
+        }
+
+        .table {
+            width: 680px;
+
+            border-bottom: 1px solid #757575;
+            padding-bottom: 10px;
+
+        }
+
+        .table img.table {
+            width: 280px;
+            float: left;
+        }
+
+        .table img {
+            width: 98px;
+
+        }
+
+        table {
+            float: left;
+            margin-left: 5px;
+
+        }
+
+        .table a img {
+            margin-left: 8px;
+        }
+
+        div.VIDEO {
+            background-color: #fcfaf6;
+            padding: 14px;
+            font-size: 18px;
+
+        }
+
+        .VIDEO ul {
+            margin: 18px 0px;
+            text-align: left;
+
+        }
+
+        .VIDEO ul.video li {
+            font-weight: normal;
+        }
+
+        .VIDEO ul.video li:first-child {
+            font-weight: bold;
+            border-bottom: 1px solid #9f224e;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            clear: both;
+            display: table;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        .clearfix {
+            clear: both;
+            display: block;
+        }
+
+        .videoLeft {
+            float: left;
+            margin-top: 18px;
+        }
+
+        .videoRight {
+            float: left;
+        }
+
+        .videoRight ul li {
+            display: flex;
+            margin: 7px 0;
+            width: 280px;
+        }
+
+        .videoRight ul li p {
+            margin-left: 10px;
+        }
+
+        .Podcasts ul li img {
+            width: 90px;
+            float: right;
+        }
+
+        .Podcasts {
+            margin-top: 10px;
+            border-top: 1px solid #757575;
+            padding: 30px 0px;
+            border-bottom: 1px solid #757575;
+        }
+
+        .Podcasts h2 u {
+            margin: 10px;
+            border-bottom: 1px solid #9f224e;
+        }
+
+        .Podcasts h2:hover {
+            color: #9f224e;
+        }
+
+        .Podcasts ul li {
+            width: 340px;
+            text-align: left;
+            border-right: 1px solid #757575;
+            font-weight: normal;
+        }
+
+        .News {
+            width: 352px;
+            margin-left: 12px;
+            padding: 20px 0px;
+        }
+
+        .News ul.news {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .News ul.news li {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .News ul.news li:first-child {
+            font-weight: bold;
+            border-bottom: 1px solid #9f224e;
+        }
+
+        .NewsA img {
+            width: 340px;
+        }
+
+        .NewsA {
+            border-bottom: 1px solid #757575;
+        }
+
+        .pd-top-bottom {
+            padding: 10px 0px;
+        }
+
+        .color {
+            color: #757575;
+        }
+
+        .News {
+            display: inline-block;
+        }
+
+        .travel {
+            border-top: 1px solid #757575;
+        }
+
+        .travel ul {
+            text-align: left;
+            padding: 20px;
+            font-size: 15px;
+
+        }
+
+        .travel ul li:first-child {
+            font-weight: bold;
+            border-bottom: 1px solid #9f224e;
+            font-size: 20px;
+
+        }
+
+        .travel ul li {
+            font-weight: normal;
+        }
+
+        .travelA {
+            width: 820px;
+        }
+
+        .travelA ul li {
+            width: 540px;
+        }
+
+        .travelA img {
+            width: 100%;
+        }
+
+        div.LIFESTYLE_wrapper {
+            width: 1100px;
+            margin: 0 auto;
+            display: block;
+            border-bottom: 2px solid black;
+        }
+
+        .lifestyle ul li {
+            text-align: left;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+
+        div.lifestyle {
+            width: 780px;
+            float: left;
+        }
+
+        div.lifestyle ul.lifestyle li:first-child {
+            width: 500px;
+            float: left;
+        }
+
+        ul.lifestyle li {
+            width: 245px;
+            float: right;
+            border-top: 1px solid silver;
+            text-align: left;
+        }
+
+        ul.lifestyle {
+            margin-top: 10px;
+            border-top: 1px solid silver;
+            padding-top: 15px;
+        }
+
+        ul.lifestyle li img.lifestyle_left {
+            width: 511px;
+        }
+
+        ul.lifestyle li img.style_right {
+            width: 245px;
+            height: 158px;
+        }
+
+        div.lifestyle_right {
+            width: 301px;
+            height: 529px;
+            border: 1px solid silver;
+            float: right;
+        }
+
+        ul.content_left li {
+            width: 249px;
+            height: 72px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        ul.content_left li img {
+            width: 100px;
+            height: 60px;
+            float: right;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+
+        ul.content_left p {
+            font-weight: bold;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        ul.content_left li span {
+            font-size: 10px;
+            line-height: 11px;
+            color: silver;
+        }
+
+        ul.content_left li.content_car {
+            background-color: #D6EDFA;
+            width: 279px;
+            padding: 10px;
+            position: relative;
+
+        }
+
+        ul.content_left li.content_car img {
+            position: absolute;
+            bottom: 42px;
+            right: 12px;
+        }
+
+        ul.content_left li.content_car p {
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        ul.content_left li.content_car input {
+            background: #fff;
+            border: 0;
+            border-radius: 3px;
+            height: 20px;
+            padding: 0 40px 0 10px;
+            font-size: 14px;
+            width: 80%;
+            outline: 0;
+        }
+
+        .Image {
+            margin: 20px 0px;
+            border-bottom: 1px solid #757575;
+            padding: 10px 0px;
+        }
+
+        u {
+            border-bottom: 1px solid #9f224e;
+            margin-left: 5px;
+        }
+
+        ul.Imgae {
+            width: 100%;
+            display: inline-block;
+        }
+
+        h2:hover {
+            color: #9f224e;
+        }
+
+        ul.Image li {
+            width: 300px;
+            min-height: 240px;
+            float: left;
+            padding: 0;
+            color: #bdbdbd;
+            text-align: left;
+            font-family: "Merriweather", serif;
+
+        }
+
+        .mg-10 {
+            margin: 10px;
+        }
+
+        ul.Image li:nth-child(2) {
+            background-color: #17191a;
+        }
+
+        ul.Image li:nth-child(3) {
+            background-color: #576574;
+        }
+
+        ul.Image li:first-child {
+            width: 800px;
+            margin-left: 0;
+
+        }
+
+        ul.Image li img {
+            width: 100%;
+        }
+
+        .InfographicsA {
+            width: 740px;
+            float: left;
+            border-bottom: 1px solid #757575;
+            padding: 10px 0px;
+        }
+
+        .InfographicsA1 ul {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .InfographicsA ul li img {
+            width: 350px;
+        }
+
+        .InforaphicsA2 {
+            background: #f7f7f7;
+            margin: 10px 0px;
+        }
+
+        .InforaphicsA2 ul li img {
+            width: 109px;
+            float: left;
+            margin-right: 10px;
+
+        }
+
+        .InforaphicsA2 ul li {
+            margin: 10px;
+            width: 259px;
+        }
+
+        .InforaphicsA3 {
+            width: 100%;
+        }
+
+        .InforaphicsA3 ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .InforaphicsA3 ul li {
+            flex-basis: 50%;
+            font-weight: normal;
+            border-bottom: 1px solid #757575;
+            border-right: 1px solid #757575;
+        }
+
+        .InforaphicsA3 h1 {
+            float: left;
+            margin-right: 10px;
+            font-size: 50px;
+        }
+
+        .InfographicsB {
+            width: 340px;
+            float: right;
+        }
+
+        .InfographicsB1 {
+            width: 320px;
+            background-color: #f7f7f7;
+            margin-left: 10px;
+        }
+
+        .InfographicsB1 button {
+            width: 100%;
+            background-color: #bdbdbd;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .InfographicsB img {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .InfographicsC {
+            display: inline-block;
+            margin-top: 30px;
+            border-top: 1px solid #576574;
+            padding: 10px;
+        }
+
+        .InfographicsC img {
+            width: 260px;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .InfographicsC ul li {
+            width: 530px;
+            font-weight: normal;
+        }
+
+        .enterprise {
+            width: 100%;
+            display: inline-block;
+            background-color: #f7f7f7;
+            margin-top: 20px;
+        }
+
+        .enterprise ul li {
+            width: 270px;
+            margin-top: 20px;
+            font-weight: normal;
+        }
+
+        .enterprise ul li img {
+            width: 100%;
+        }
+
+        .synthetic {
+            display: flex;
+            padding: 20px 0px;
+            border-top: 3px solid #757575;
+            margin-top: 50px;
+            border-bottom: 1px solid #757575;
+        }
+
+
+        .synthetic ul li {
+            width: 140px;
+            font-weight: normal;
+        }
+
+        .wrap-contact {
+            border-left: 1px solid #757575;
+            padding: 0px 10px;
+        }
+
+        .contactDownloadapp {
+            width: 250px;
+        }
+
+        .contactDownloadapp a {
+            width: 120px;
+            border-radius: 3px;
+            height: 32px;
+            line-height: 30px;
+            background: #f7f7f7;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            text-align: center;
+            margin-right: 10px;
+            padding: 5px;
+            color: #17191a;
+        }
+
+        .contact a.mail {
+            width: 120px;
+            float: left;
+            border-radius: 3px;
+            height: 20px;
+            line-height: 20px;
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            margin-right: 10px;
+            color: #17191a;
+        }
+
+        .contact a.mail::before {
+            content: "✉️";
+        }
+
+        .contact a.ads::before {
+            content: "❤️️";
+        }
+
+        .contact a.vlight::before {
+            content: "🙈";
+        }
+
+        .contact a.ads {
+            width: 120px;
+            float: left;
+            border-radius: 3px;
+            height: 20px;
+            line-height: 20px;
+            display: block;
+            text-align: left;
+            color: #17191a;
+        }
+
+        .contact a.vlight {
+            width: 100%;
+            float: left;
+            display: block;
+            margin-bottom: 15px;
+            color: #17191a;
+        }
+
+        .wrap-contact p {
+            color: #757575;
+        }
+
+        .contact a:hover {
+            color: #3498db;
+        }
+
+        .hotline {
+            padding-top: 8px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .hotline p {
+            color: #757575;
+            line-height: 120%;
+            margin-bottom: 10px;
+
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .footer {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .footer p {
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 5px;
+        }
+    </style>
+    <div id="container">
+        <img class="big"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMbZS36g_DNBfVZeM9aAC2jmgWXX5iJzQoog&usqp=CAU"
+            alt="">
+        <div id="header" class="pd">
+            <img class="mg-left" src="https://s1.vnecdn.net/vnexpress/restruct/i/v636/v2_2019/pc/graphics/logo.svg"
+                alt="">
+            <span class="pd ">Thứ sáu, 12/8/2022</span>
+            <a class="title" href="">Mới nhất</a>
+            <a class="title" href="">International</a>
+            <input type="text" name="" id="" placeholder="Tìm kiếm">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a class="login" href="">Đăng nhập</a>
+            <div class="headerB">
+                <ul>
+                    <li>Thời sự
+                        <ul>
+                            <li>Chính trị</li>
+                            <li>Dân sinh</li>
+                            <li>Lao động-Việc làm</li>
+                            <li>Giao thông</li>
+                            <li>Mekong</li>
+                            <li>Qũy hy vọng</li>
+                        </ul>
+                    </li>
+                    <li>Góc nhìn
+                        <ul>
+                            <li>Bình luận nhiều</li>
+                            <li>Chính trị- chính sách</li>
+                            <li>Y tế & Sức khỏe
+                            <li>
+                            <li>KInh doanh & Quản trị</li>
+                            <li>giáo dục & tri thức </li>
+                            <li>Môi trường</li>
+                            <li>Văn hóa & lối sống</li>
+                        </ul>
+                    </li>
+                    <li>Thế giới
+                        <ul>
+                            <li>Tư liệu</li>
+                            <li>Phân tích </li>
+                            <li>Người Việt 5 châu</li>
+                            <li>Cuộc sống đó đây</li>
+                            <li>Quân sự</li>
+                        </ul>
+                    </li>
+                    <li>Video
+                        <ul>
+                            <li>Thời sự</li>
+                            <li>Nhịp sống</li>
+                            <li>Food</li>
+                            <li>Tôi kể</li>
+                            <li>Chuyện núi rừng</li>
+                            <li>Pháp luật</li>
+                            <li>giải trí</li>
+                            <li>Thể thao</li>
+                        </ul>
+
+                    </li>
+                    <li>Poscast
+                        <ul>
+                            <li>Họ nói gì</li>
+                            <li>Hộp đen</li>
+                            <li>Ly hôn</li>
+                            <li>Thầm thì</li>
+                            <li>Bạn ổn không?</li>
+                            <li>Tôi trong gương</li>
+                        </ul>
+                    </li>
+                    <li>Kinh doanh
+                        <ul>
+                            <li>Doanh Nhân</li>
+                            <li>Tài chính</li>
+                            <li>Bất động sản</li>
+                            <li>Khởi nghiệp</li>
+                            <li>Doanh nghiệp</li>
+                        </ul>
+                    </li>
+                    <li>Khoa học
+                        <ul>
+                            <li>Khoa học trong nước</li>
+                            <li>Tin tức </li>
+                            <li>Phát minh</li>
+                            <li>ứng dụng</li>
+                            <li>Thế giới tự nhiên</li>
+                        </ul>
+                    </li>
+                    <li>giải trí
+                        <ul>
+                            <li>giới sao</li>
+                            <li>Video</li>
+                            <li>Phim</li>
+                            <li>Nhạc</li>
+                            <li>Thời trang</li>
+                            <li>Làm đẹp</li>
+                            <li>Sách</li>
+                            <li>Sân khấu-Mỹ thuật</li>
+                        </ul>
+                    </li>
+                    <li>Thể thao
+                        <ul>
+                            <li>Premier League</li>
+                            <li>La Liga</li>
+                            <li>Ligue1</li>
+                            <li>Bundesliga</li>
+                            <li>Seria A</li>
+                            <li>Eredivisie</li>
+                            <li>Hậu trường</li>
+                            <li>Tennis</li>
+                        </ul>
+                    </li>
+                    <li>Pháp luật
+                        <ul>
+                            <li>Hồ sơ phá án</li>
+                            <li>Tư vấn</li>
+                            <li>Video</li>
+                        </ul>
+                    </li>
+                    <li>giáo dục
+                        <ul>
+                            <li>Tin tức</li>
+                            <li>Tuyển sinh</li>
+                            <li>Chân dung</li>
+                            <li>Du học</li>
+                            <li>Học tiếng anh</li>
+                            <li>Trắc nghiệm</li>
+                        </ul>
+                    </li>
+                    <li>Sức khỏe
+                        <ul>
+                            <li>Tin tức</li>
+                            <li>Tư vấn</li>
+                            <li>Dinh dưỡng</li>
+                            <li>Sức khỏe</li>
+                            <li>Đàn ông</li>
+                            <li>Các bệnh</li>
+                        </ul>
+                    </li>
+                    <li>Đời sống
+                        <ul>
+                            <li>Tổ ấm</li>
+                            <li>Bài học sống</li>
+                            <li>Nhà</li>
+                            <li>Tiêu dùng</li>
+                            <li>Cooking</li>
+                        </ul>
+                    </li>
+                    <li>Du lịch
+                        <ul>
+                            <li>Điểm đến</li>
+                            <li>ẩm thực</li>
+                            <li>Tư vấn</li>
+                            <li>Cẩm nang</li>
+                            <li>ảnh</li>
+                            <li>Ăn và chơi</li>
+                        </ul>
+                    </li>
+                    <li>Số hóa
+                        <ul>
+                            <li>Công nghệ</li>
+                            <li>Blockchain</li>
+                            <li>Sản phẩm</li>
+                            <li>Tech Awards 2022</li>
+                            <li>Starup</li>
+                        </ul>
+                    </li>
+                    <li>Xe
+                        <ul>
+                            <li>Thị trường</li>
+                            <li>Cầm lái</li>
+                            <li>Diễn đàn</li>
+                            <li>V-car</li>
+                            <li>Thi bằng lái</li>
+                        </ul>
+                    </li>
+                    <li>ý kiến
+                        <ul>
+                            <li>Thời sự</li>
+                            <li>Đời sống</li>
+                        </ul>
+                    </li>
+                    <li>Tâm sự
+                        <ul>
+                            <li>Chuyên gia gỡ rối</li>
+                            <li>Hẹn hò</li>
+                        </ul>
+                    </li>
+                    <li>Tất cả</li>
+                </ul>
+            </div>
+        </div>
+        <div id="wp-content">
+            <div class="title">
+                <div class="titleA">
+                    <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/AnhchupManhinh20220813luc02161-6838-2623-1660332018.png?w=680&h=408&q=100&dpr=1&fit=crop&s=BzIwhdUkpHcZwZn9SRklnw"
+                        alt="">
+                    <h3>Cháy tầng 5 tòa nhà trung tâm TP.HCM</h3>
+                    <p>Đám cháy bốc lên ngùn ngụt kèm nhiều tiếng nổ lớn tại tầng 5 toà nhà Seaprodex, ở quận 1 khiến
+                        nhiều người hoảng loạn, ngày 13/8.</p>
+                </div>
+                <div class="titleB">
+                    <ul class="titleB">
+                        <li>
+                            <h3>HLV U16 Việt Nam:'Phải là thánh nhân mới thắng được Indonesia'</h3>
+                            <p>Theo HLV Nguyễn Quốc Tuấn, cầu thủ Việt Nam đã cố gắng hết sức trước khi thua Indonesia ở
+                                chung kết U16 Đông Nam Á tối 12/8. 122</p>
+                        </li>
+
+                        <li>
+                            <h3>Virus mới phát hiện ở Trung Quốc nguy hiểm như thế nào?</h3>
+                            <p>Henipavirus là mầm bệnh mới nổi, độc lực cao, dễ bùng phát bệnh ở người, tỷ lệ tử
+                                vong cao
+                                hơn so
+                                với Covid-19.</p>
+                        </li>
+                        <li>
+                            <span>Góc nhìn</span>
+                            <h3>Tình dục đồng thuận</h3>
+                            <p>Đồng thuận phải là căn cứ cốt lõi, xác định một hành vi có phải là tấn công tình dục
+                                hay
+                                không.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content clearfix">
+                <div class="contentA">
+                    <ul>
+                        <li>
+                            <h3>Tài xế đâm xe vào cây xăng khai "vừa uống bia"</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/z363965245447634e76541c3c40532-4756-7917-1660358206.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=n7GPZZnC6jfHxY8UsAwh1A"
+                                alt="">
+                            <p>Trước khi lao ôtô 4 chỗ vào cây xăng gần Ngã Tư Sở khiến 8 người bị thương, tài xế Ngô
+                                Công Hán, 35 tuổi, đã uống bia.</p>
+                        </li>
+                        <li>
+                            <h3>Những đứa con ký sinh</h3>
+                            <img src="https://i1-giadinh.vnecdn.net/2022/08/10/1-9530-1624377731-1660123926-2094-1660144755.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=Qtecs_er_SueehZnbt9HPA"
+                                alt="">
+                            <p>Chiều muộn, bà Nguyễn Thị Thành vẫn đạp xe xuống nhà cô gái ở xóm dưới, xin số điện thoại
+                                cho cậu con trai hơn 35 tuổi làm quen.</p>
+                        </li>
+                        <li>
+                            <h3>Mai Phương từ gia sư Tiếng anh đến Hoa hậu</h3>
+                            <img src="https://i1-giaitri.vnecdn.net/2022/08/13/huynhnguyenmaiphuongava1-16602-4797-6507-1660326768.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=lNd1eKeoVPTC0vzTYsAaUQ"
+                                alt="">
+                            <p>Mai Phương từng là gia sư tiếng Anh, được giám khảo chọn thắng Miss World Vietnam không
+                                chỉ ở sắc vóc mà còn do có nhiều kỹ năng mềm. </p>
+                        </li>
+                        <li>
+                            <h3>Cục trưởng Quản lý giá bị cách tất cả chức vụ trong Đảng</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/atuan4915165787577316578762804-7690-1322-1660212122.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=59qSUAicw9AFuytDCWJwUQ"
+                                alt="">
+                            <p>Ông Nguyễn Anh Tuấn, Bí thư Đảng ủy, Cục trưởng Quản lý giá, Bộ Tài chính, bị cách tất cả
+                                chức vụ trong Đảng nhiệm kỳ 2015-2020 và 2020-2025.</p>
+                        </li>
+                        <li>
+                            <h3>Người tông chết nữ sinh ở Ninh Thuận bị bắt</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/Kham-nghiem-hien-truong-12-7-2-6880-3119-1660205856.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=s4OlQ3d-gWDYBMNVPUwtXQ"
+                                alt="">
+                            <p>Thiếu tá Hoàng Văn Minh, trợ lý tài chính Trung đoàn 937, bị Cơ quan điều tra Hình sự khu
+                                vực 3 bắt tạm giam do lái ôtô tông chết nữ sinh ở TP Phan Rang - Tháp Chàm.</p>
+                        </li>
+                        <li>
+                            <h3>Phần Lan ngừng cung cấp visa cho hộ chiếu Việt Nam</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/ho-chieu-mau-moi-1-jpg-1660207-2314-6039-1660207779.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=0g3CEq2y8Fw-6xLtTy7rcA"
+                                alt="">
+                            <p>Đại sứ quán Phần Lan thông báo dừng cấp visa cho hộ chiếu phổ thông Việt Nam mẫu mới màu
+                                xanh tím than, do không có thông tin nơi sinh. </p>
+                        </li>
+                        <li>
+                            <h3>Cao tốc giảm ùn tắc khi thu phí không dừng</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/xecaotoc-1660205816-5797-1660206476.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=_mn_YkWL9ta0OZL2Difveg"
+                                alt="">
+                            <p>Sau 10 ngày thu phí không dừng (ETC) trên các cao tốc, ôtô lưu thông thông suốt qua trạm
+                                thu phí, tình trạng lỗi giao dịch đã giảm mạnh. 13 </p>
+                        </li>
+                        <li>
+                            <h3>Cao tốc giảm ùn tắc khi thu phí không dừng</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/xecaotoc-1660205816-5797-1660206476.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=_mn_YkWL9ta0OZL2Difveg"
+                                alt="">
+                            <p>Sau 10 ngày thu phí không dừng (ETC) trên các cao tốc, ôtô lưu thông thông suốt qua trạm
+                                thu phí, tình trạng lỗi giao dịch đã giảm mạnh. 13 </p>
+                        </li>
+                        <li>
+                            <h3>Lai Châu xin dừng sân bay</h3>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/12/111120214123371636606319644-16-4028-5051-1660317500.jpg?w=220&h=132&q=100&dpr=1&fit=crop&s=ID6E6lJpYdv9FQnhML8nJQ"
+                                alt="">
+                            <p>UBND tỉnh Lai Châu vừa kiến nghị cơ quan có thẩm quyền cho phép xây dựng sân bay nội địa
+                                công suất 0,5 triệu hành khách/năm theo hình thức PPP.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contentB">
+                    <div class="business">
+                        <div class="businessA">
+                            <ul>
+                                <li>Kinh doanh</li>
+                                <li>Quốc tế</li>
+                                <li>Doanh nghiệp</li>
+                                <li>Chứng khoán</li>
+                                <li>Bất động sản</li>
+                                <li>Bảo hiểm</li>
+                            </ul>
+                        </div>
+                        <div class="businessB">
+                            <div class="businessB1">
+                                <img src="https://i1-kinhdoanh.vnecdn.net/2022/08/13/000-32gc7ut-1660356845-9426-1660356880.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=oGxLMzkZxal7zQG76PHGhA"
+                                    alt="">
+                                <h4>Người mua nhà Trung Quốc ngày càng tuyệt vọng</h4>
+                                <p>Mới kết hôn và chuẩn bị có con đầu lòng, nhưng Wang vẫn chưa được bàn giao
+                                    căn hộ
+                                    anh mua ở
+                                    Vũ Hán cách đây 3 năm. </p>
+                            </div>
+                            <div class="businessB2">
+                                <h4>Chủ quán Highlands Coffee kinh doanh ra sao tại Việt Nam?</h4>
+                                <p>Highlands Coffee lần đầu báo lỗ trong năm ngoái nhưng vẫn là chuỗi kinh doanh
+                                    tốt nhất trong hệ sinh thái của ... </p>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="businessC">
+                            <ul>
+                                <li>
+                                    <h4 class="pin">Kinh tế bị kéo lùi 4 năm chỉ trong 1 quý</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">Ukraine bị hạ tín nhiệm xuống mức 'vỡ nợ'</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">7 đầu mối xăng dầu bị tước giấy phép nhập khẩu</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <img class="table"
+                            src="https://tpc.googlesyndication.com/pagead/imgad?id=CICAgOD4pc_VCxABGAEyCFtpuDXBihYu"
+                            alt="">
+                        <table border="1">
+                            <tr>
+                                <th>Gía vàng</th>
+                                <td>Mua</td>
+                                <td>Bán</td>
+                            </tr>
+                            <tr>
+                                <td>Vàng SJC (triệu đồng/lượng)</td>
+                                <td> 32,976</td>
+                                <td> 68,900</td>
+                            </tr>
+                            <tr>
+                                <td>Thế giới (USD/ounce)</td>
+                                <td>68,250</td>
+                                <td>69,270</td>
+                            </tr>
+                        </table>
+                        <a href="">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v636/banner/logo-startup.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v636/banner/logo-vhome.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="business">
+                        <div class="businessA">
+                            <ul>
+                                <li>Đời sống</li>
+                                <li>Bài học sống</li>
+                                <li>Tổ ấm</li>
+                                <li>Nhà </li>
+                                <li>Tiêu dùng</li>
+                            </ul>
+                        </div>
+                        <div class="businessB">
+                            <div class="businessB1">
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/hatgiongtrungquoc-1660360972-9229-1660361828.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=eFaLrunsl7QJTn6-nPTmWQ"
+                                    alt="">
+                                <h4>Người mua nhà Trung Quốc ngày càng tuyệt vọng</h4>
+                                <p>Mới kết hôn và chuẩn bị có con đầu lòng, nhưng Wang vẫn chưa được bàn giao
+                                    căn hộ
+                                    anh mua ở
+                                    Vũ Hán cách đây 3 năm. </p>
+                            </div>
+                            <div class="businessB2">
+                                <h4>Chủ quán Highlands Coffee kinh doanh ra sao tại Việt Nam?</h4>
+                                <p>Highlands Coffee lần đầu báo lỗ trong năm ngoái nhưng vẫn là chuỗi kinh doanh
+                                    tốt nhất trong hệ sinh thái của ... </p>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="businessC">
+                            <ul>
+                                <li>
+                                    <h4 class="pin">Kinh tế bị kéo lùi 4 năm chỉ trong 1 quý</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">Ukraine bị hạ tín nhiệm xuống mức 'vỡ nợ'</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">7 đầu mối xăng dầu bị tước giấy phép nhập khẩu</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="business">
+                        <div class="businessA">
+                            <ul>
+                                <li>giáo dục</li>
+                                <li>Tin tức</li>
+                                <li>Tuyển sinh</li>
+                                <li>Chân dung</li>
+                                <li>Du học</li>
+                                <li>giáo dục 4.0</li>
+                                <input type="text" id="" name="" placeholder="Tra cứu Đại Học">
+                            </ul>
+
+                        </div>
+                        <div class="businessB">
+                            <div class="businessB1">
+                                <img src="https://i1-kinhdoanh.vnecdn.net/2022/08/13/000-32gc7ut-1660356845-9426-1660356880.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=oGxLMzkZxal7zQG76PHGhA"
+                                    alt="">
+                                <h4>Người mua nhà Trung Quốc ngày càng tuyệt vọng</h4>
+                                <p>Mới kết hôn và chuẩn bị có con đầu lòng, nhưng Wang vẫn chưa được bàn giao
+                                    căn hộ
+                                    anh mua ở
+                                    Vũ Hán cách đây 3 năm. </p>
+                            </div>
+                            <div class="businessB2">
+                                <h4>Chủ quán Highlands Coffee kinh doanh ra sao tại Việt Nam?</h4>
+                                <p>Highlands Coffee lần đầu báo lỗ trong năm ngoái nhưng vẫn là chuỗi kinh doanh
+                                    tốt nhất trong hệ sinh thái của ... </p>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="businessC">
+                            <ul>
+                                <li>
+                                    <h4 class="pin">Kinh tế bị kéo lùi 4 năm chỉ trong 1 quý</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">Ukraine bị hạ tín nhiệm xuống mức 'vỡ nợ'</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">7 đầu mối xăng dầu bị tước giấy phép nhập khẩu</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="business">
+                        <div class="businessA">
+                            <ul>
+                                <li>giáo dục</li>
+                                <li>Tin tức</li>
+                                <li>Tuyển sinh</li>
+                                <li>Chân dung</li>
+                                <li>Du học</li>
+                                <li>giáo dục 4.0</li>
+                            </ul>
+
+                        </div>
+                        <div class="businessB">
+                            <div class="businessB1">
+                                <img src="https://i1-thethao.vnecdn.net/2022/08/13/screenshot-2022-08-13-at-02-12-5426-7039-1660331780.png?w=380&h=228&q=100&dpr=1&fit=crop&s=xMOhqSMGDF13JX6y7M0raw"
+                                    alt="">
+                                <h4>Người mua nhà Trung Quốc ngày càng tuyệt vọng</h4>
+                                <p>Mới kết hôn và chuẩn bị có con đầu lòng, nhưng Wang vẫn chưa được bàn giao
+                                    căn hộ
+                                    anh mua ở
+                                    Vũ Hán cách đây 3 năm. </p>
+                            </div>
+                            <div class="businessB2">
+                                <h4>Chủ quán Highlands Coffee kinh doanh ra sao tại Việt Nam?</h4>
+                                <p>Highlands Coffee lần đầu báo lỗ trong năm ngoái nhưng vẫn là chuỗi kinh doanh
+                                    tốt nhất trong hệ sinh thái của ... </p>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="businessC">
+                            <ul>
+                                <li>
+                                    <h4 class="pin">Kinh tế bị kéo lùi 4 năm chỉ trong 1 quý</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">Ukraine bị hạ tín nhiệm xuống mức 'vỡ nợ'</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">7 đầu mối xăng dầu bị tước giấy phép nhập khẩu</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="business">
+                        <div class="businessA">
+                            <ul>
+                                <li>giáo dục</li>
+                                <li>Tin tức</li>
+                                <li>Tuyển sinh</li>
+                                <li>Chân dung</li>
+                                <li>Du học</li>
+                                <li>giáo dục 4.0</li>
+                            </ul>
+
+                        </div>
+                        <div class="businessB">
+                            <div class="businessB1">
+                                <img src="https://i1-giadinh.vnecdn.net/2022/08/13/a-nh-chu-p-ma-n-hi-nh-2022-08-2859-5765-1660365692.png?w=380&h=228&q=100&dpr=1&fit=crop&s=ajuccy0mzQph2hD9X08BAg"
+                                    alt="">
+                                <h4>Người mua nhà Trung Quốc ngày càng tuyệt vọng</h4>
+                                <p>Mới kết hôn và chuẩn bị có con đầu lòng, nhưng Wang vẫn chưa được bàn giao
+                                    căn hộ
+                                    anh mua ở
+                                    Vũ Hán cách đây 3 năm. </p>
+                            </div>
+                            <div class="businessB2">
+                                <h4>Chủ quán Highlands Coffee kinh doanh ra sao tại Việt Nam?</h4>
+                                <p>Highlands Coffee lần đầu báo lỗ trong năm ngoái nhưng vẫn là chuỗi kinh doanh
+                                    tốt nhất trong hệ sinh thái của ... </p>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="businessC">
+                            <ul>
+                                <li>
+                                    <h4 class="pin">Kinh tế bị kéo lùi 4 năm chỉ trong 1 quý</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">Ukraine bị hạ tín nhiệm xuống mức 'vỡ nợ'</h4>
+                                </li>
+                                <li>
+                                    <h4 class="pin">7 đầu mối xăng dầu bị tước giấy phép nhập khẩu</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="VIDEO clearfix">
+                <ul class="video">
+                    <li>Video</li>
+                    <li>Thời sự</li>
+                    <li>Nhịp sống</li>
+                    <li>Food</li>
+                    <li>Cuộc sống 4.0</li>
+                    <li>Tôi kể</li>
+                    <li>Chuyện núi rừng</li>
+                    <li>Nguy-cơ</li>
+                </ul>
+                <div class="videoLeft">
+                    <iframe width="720" height="400" src="https://www.youtube.com/embed/hLz4ZrotoIk"
+                        title="Nhưng trong cả thế giới ánh mắt anh chỉ say người... Pháo Hồng ~ Nhạc Chill Hot Tiktok Buồn Nhất"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videoRight">
+                    <ul>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/hLz4ZrotoIk"
+                                title="Nhưng trong cả thế giới ánh mắt anh chỉ say người... Pháo Hồng ~ Nhạc Chill Hot Tiktok Buồn Nhất"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Cây xanh bọc kín ngôi miếu cổ</p>
+                        </li>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/QGcH0UEmEd4"
+                                title="Ngôi đền huyền thoại | Cristiano Ronaldo (phần 1)" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Ngôi đền huyền thoại :Cristiano Ronadlo</p>
+                        </li>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/CzwfuzhDl2A"
+                                title="TẠM BIỆT SERGIO RAMOS | Huyền Thoại trấn giữ biên cương THÀNH MADRID"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Tạm biết Sergio Ramos</p>
+                        </li>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/hLz4ZrotoIk"
+                                title="Nhưng trong cả thế giới ánh mắt anh chỉ say người... Pháo Hồng ~ Nhạc Chill Hot Tiktok Buồn Nhất"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Cây xanh bọc kín ngôi miếu cổ</p>
+                        </li>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/hLz4ZrotoIk"
+                                title="Nhưng trong cả thế giới ánh mắt anh chỉ say người... Pháo Hồng ~ Nhạc Chill Hot Tiktok Buồn Nhất"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Cây xanh bọc kín ngôi miếu cổ</p>
+                        </li>
+                        <li>
+                            <iframe width="120" height="67" src="https://www.youtube.com/embed/hLz4ZrotoIk"
+                                title="Nhưng trong cả thế giới ánh mắt anh chỉ say người... Pháo Hồng ~ Nhạc Chill Hot Tiktok Buồn Nhất"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <p>Cây xanh bọc kín ngôi miếu cổ</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="generalNews">
+                <div class="Podcasts">
+                    <h2><u>Podcasts</u></h2>
+                    <ul>
+                        <li>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/11/co-phai-nam-gioi-bao-gio-cung-muon-sex-1660236368.jpg?w=160&h=160&q=100&dpr=2&fit=crop&s=7D3OH3XaSfKzVTx_4Wrblg"
+                                alt="">
+                            <h4>Có phải nam giới bao giờ cũng muốn sex ?</h4>
+                            <p>Nhu cầu của nam giới thực sự đến đâu? Làm cách nào để kiểm soát nhu cầu tình dục của
+                                mình? </p>
+                        </li>
+                        <li>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/14/ly-hon-vi-chong-luon-lam-theo-y-me-1660446680.jpg?w=160&h=160&q=100&dpr=2&fit=crop&s=yoaohdnZ2Adq2nEAKSLNVw"
+                                alt="">
+                            <h4>'Ly hôn vì chồng luôn làm theo ý mẹ'</h4>
+                            <p>Khác biệt lối sống nhưng Oanh cho rằng mình có thể chịu đựng cho đến khi cô tự bỏ tiền
+                                mua nhà và bị...</p>
+                        </li>
+                        <li>
+                            <img src="https://i1-vnexpress.vnecdn.net/2022/08/10/cam-chiu-de-chua-benh-1660138324.jpg?w=160&h=160&q=100&dpr=2&fit=crop&s=ODNt2q74c5_NMnvKrnF6_g"
+                                alt="">
+                            <h4>'Bác sĩ bị đánh ,ai cũng quan tâm nhưng không ai giải quyết'</h4>
+                            <p>17 năm làm tại khoa cấp cứu, nhiều lần chứng kiến đồng nghiệp bị chửi bới, đuổi chém, bác
+                                sĩ Diêu Hà... </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="News">
+                    <ul class="news">
+                        <li>Thời sự</li>
+                        <li>Chính trị </li>
+                        <li>Lao động-việc làm</li>
+                        <li>Dân sinh</li>
+                    </ul>
+                    <div class="NewsA pd-top-bottom">
+                        <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/cho-sam-7890-1660372054.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=ooFXvt6cLA_EkQYFDX236g"
+                            alt="">
+                        <h4>Chợ sâm Ngọc Linh giao dịch hàng tỷ đồng mỗi phiên</h4>
+                        <p><span class="color">Quảng Nam-</span>Chợ sâm Ngọc Linh, huyện Nam Trà My, mỗi tháng họp ba
+                            ngày, bán hàng chục kg, thu về phiên nhiều nhất hơn 12 tỷ đồng.</p>
+                    </div>
+                    <div class="NewsB pd-top-bottom">
+                        <h4>Cháy biệt thự ở khu đô thị Pháp Vân</h4>
+                        <p><span class="color">Hà Nội-</span>Căn biệt thự là nhà ở kết hợp kinh doanh vật tư nông nghiệp
+                            ở khu đô thị Pháp Vân, quận Hoàng Mai, bốc cháy ngùn ngụt sáng 13/8. </p>
+                    </div>
+                </div>
+                <div class="News">
+                    <ul class="news">
+                        <li>Thế giới</li>
+                        <li>Tư liệu</li>
+                        <li>Phân tích</li>
+                    </ul>
+                    <div class="NewsA pd-top-bottom">
+                        <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/IIKL6UTKXFNJ5JZ4EF4UKGLBEE4286-1612-3548-1660379780.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=7mRwryB9uNvil-0yt7V-Bw"
+                            alt="">
+                        <h4>Đức giới hạn nhiệt độ máy sưởi</h4>
+                        <p>Đức sẽ hạn chế nhiệt độ máy sưởi trong các tòa nhà công cộng vào mùa đông để tiết kiệm khí
+                            đốt khi Nga giảm nguồn cung. </p>
+                    </div>
+                    <div class="NewsB pd-top-bottom">
+                        <h4>Tổng thống Mexico hứng chỉ trích vì vụ hải quân hộ tống linh vật thể thao</h4>
+                        <p>Tổng thống Mexico Obrador hứng chỉ trích về vụ trực thăng hải quân nước này được dùng để chở
+                            linh vật đội bóng chày quê nhà của ông. </p>
+                    </div>
+                </div>
+
+                <div class="News">
+                    <ul class="news">
+                        <li>Pháp luật</li>
+                        <li>Hồ sơ phá án</li>
+                        <li>Tư vấn</li>
+                    </ul>
+                    <div class="NewsA pd-top-bottom">
+                        <img src="https://i1-vnexpress.vnecdn.net/2022/08/13/295508469626134052265525717674-5319-2690-1660367259.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=7pwIpABOVnfdFFXwZYDE8w"
+                            alt="">
+                        <h4>Chủ tài khoản đăng video 'nói xấu người miền Trung' bị xử lý</h4>
+                        <p><span class="color">Lâm Đồng-</span>Công an đã triệu tập chủ tài khoản Hoàng Minh, người đăng
+                            Facebook và Tiktok video "Bạn nghĩ sao về người miền Trung" có nội dung chê bai
+                        </p>
+                    </div>
+                    <div class="NewsB pd-top-bottom">
+                        <h4>Bi kịch của phó giáo sư bị vợ chê 'không biết kiếm tiền'</h4>
+                        <p><span class="color">Hồng Kông-</span>Mâu thuẫn với người vợ cay nghiệt luôn miệt thị chồng
+                            không kiếm nhiều tiền</p>
+                    </div>
+                </div>
+            </div>
+            <div class="LIFESTYLE_wrapper clearfix">
+                <div class="lifestyle">
+                    <ul>
+                        <li>
+                            <h3>Xe</h3>
+                        </li>
+                        <li>Thị trường</li>
+                        <li>Cầm lái</li>
+                        <li>V-Car</li>
+                        <li>Diễn đàn</li>
+                        <li>Video</li>
+                        <li>Cẩm nang mua xe</li>
+                    </ul>
+                    <ul class="lifestyle">
+
+                        <li>
+
+                            <img class="lifestyle_left"
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/13/HyundaiCasper1-1660297370-6993-1660379706.jpg?w=500&h=300&q=100&dpr=1&fit=crop&s=fxSLmSY4VoW2bC2QCaAd-w">
+                            <h1>Hyundai sắp bán hai xe điện thay thế i10</h1>
+                            <p>Hãng xe Hàn sẽ ra mắt hai mẫu xe điện cỡ nhỏ với mức giá phải chăng dựa trên cùng nền
+                                tảng, lần lượt vào giữa 2023 và cuối 2024. </p>
+                        </li>
+                        <li>
+                            <img class="style_right"
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/13/vinfastluxa2020vnexpress645251-9359-7735-1660362995.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=kWdWqASBqZWE2_qc4qxlrQ">
+                            <p>Thị phần sedan cỡ D, E tháng 7 - VinFast Lux A2.0 lên đỉnh</p>
+                        </li>
+                        <li>
+                            <img class="style_right"
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/12/20191017074544800x533-16602943-7584-8616-1660294387.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=5uEyP2PFfsnYfNQ0qDa28A">
+                            <p>Dưới 300 triệu có thể mua được xe bán tải nào?</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lifestyle_right">
+                    <ul class="content_left">
+                        <li class="content_car">
+                            <h3>V-Car</h3>
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/c/v1364/v2_2019/pc/images/graphics/bg-car.png"
+                                alt="">
+                            <p>Gía,thông số kĩ thuật,đánh giá chi tiết</p>
+                            <input type="text" name="" id="" placeholder="Nhập tên xe cần tìm">
+                        </li>
+                        <li>
+                            <img
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/13/fordrangerwildtrack28-16603756-4106-2700-1660375858.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=Bzj2ighnsotJow73myN_Sg">
+                            <h4>Ford Ranger 2022: động cơ mới, thêm phiên bản, giá tăng nhẹ 12</h4>
+
+                        </li>
+                        <li>
+                            <img
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/11/297655781514626788216781789958-3825-8103-1660191593.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=B79jLbjUJnzbnN6hqSJrlw">
+                            <h4>Xe đâm vào thiết bị người dân tự gắn trên đường, ai đền? 14</h4>
+                        </li>
+                        <li>
+                            <img
+                                src="https://i1-vnexpress.vnecdn.net/2022/08/13/6-1660365599-1660365616-5015-1-5946-7984-1660367178.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=dMAe2x_nUGmISi7dGqKblA">
+                            <h4>Xe máy Honda 'giảm sốt'</h4>
+                        </li>
+                        <li>
+                            <img
+                                src="https://i1-sohoa.vnecdn.net/2022/08/12/top-1660281237-9995-1660281291.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=Iziz3Mq6KPnqVLU5KrERhA">
+                            <h4>Những lựa chọn máy sấy quần áo giá rẻ</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Image clearfix">
+                <h2><u>Ảnh</u></h2>
+                <ul class="Image">
+                    <li>
+                        <img
+                            src="https://i1-vnexpress.vnecdn.net/2022/08/13/nghe-lam-nan-nua-o-quan-son-18-1660357750-1660393132.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=fFOTyTbHdVGnjYeMjWTlng">
+                        <p></p>
+                    </li>
+                    <li>
+                        <h3 class="mg-10">Nghề làm nan ở vùng cao Thanh Hóa</h3>
+                        <p class="mg-10">Người dân ở huyện biên giới Quan Sơn vào rừng đốn cây vầu, nứa về chẻ thành nan
+                            bán cho thương lái, mỗi ngày công kiếm gần 200.000 đồng.</p>
+                        <span class="mg-10">Thời sự</span>
+                    </li>
+                    <li>
+                        <h3 class="mg-10">Tái thả hổ mang chúa, mèo rừng về tự nhiên</h3>
+                        <p class="mg-10">Gần 100 động vật là tang vật vụ án buôn bán động vật hoang dã trái phép trên
+                            địa bàn các tỉnh phía Bắc, được tái thả về rừng đặc dụng Hương Sơn.</p>
+                        <span class="mg-10">Khoa học</span>
+                    </li>
+            </div>
+            <div class="Infographics">
+                <div class="InfographicsA">
+                    <div class="InforaphicsA1">
+                        <ul>
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/08/12/nhan-con-nuoi-03-jpeg.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=prta-5r5SG6RwM-OzBnJWw"
+                                    alt="">
+                                <h4>Muốn nhận con nuôi cần những điều kiện gì?</h4>
+                            </li>
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/08/12/Settop-Vien-tro-quan-su.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=dqajAdZsVOgD-q_GT-QmWA"
+                                    alt="">
+                                <h4>Muốn nhận con nuôi cần những điều kiện gì?</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="InforaphicsA2">
+                        <h2><u>Sự kiện</u></h2>
+                        <ul>
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/08/05/box240x1441659690376jpg-1659690788.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=Bu6RX5Q-w0HvUPahUjyvgw"
+                                    alt="">
+                                <h5>Aquaman Vietnam mở cổng đăng ký</h5>
+                            </li>
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/08/05/KunNhaTrangjpg-1659690902.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=_3XSSNmBIPbYlpvbtfcZXQ"
+                                    alt="">
+                                <h5>Kun Marathon Nha Trang 2022</h5>
+                            </li>
+
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/21/480x288png-1658380510.png?w=120&h=72&q=100&dpr=1&fit=crop&s=D0fbL9n6OC4aQG6D1mYjVg"
+                                    alt="">
+                                <h5>Mở cổng nộp hồ sơ tham gia </h5>
+                            </li>
+                            <li>
+                                <img src="https://i1-vnexpress.vnecdn.net/2022/07/21/techawardsjpg-1658380017.jpg?w=120&h=72&q=100&dpr=1&fit=crop&s=J8HkzfGEljhYwqWmWNLEpQ"
+                                    alt="">
+                                <h5>Tech Awards 2022 -Bình chọn Sản phẩm tôi yêu</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="InforaphicsA3">
+                        <h2><u>Xem nhiều</u></h2>
+                        <ul>
+                            <li>
+                                <h1>1</h1>
+                                <p>Pau lại hoà khi Quang Hải đá chính</p>
+                            </li>
+                            <li>
+                                <h1>2</h1>
+                                <p>Man Utd thua thảm ở Ngoại hạng Anh</p>
+                            </li>
+                            <li>
+                                <h1>3</h1>
+                                <p>Hơn trăm người tìm ba mẹ con trong căn nhà cháy </p>
+                            </li>
+                            <li>
+                                <h1>4</h1>
+                                <p>Cựu trưởng công an quận Tây Hồ bị đề nghị 9-10 năm tù </p>
+                            </li>
+                            <li>
+                                <h1>5</h1>
+                                <p>Gabriel Jesus giúp Arsenal xử đẹp Leicester</p>
+                            </li>
+                            <li>
+                                <h1>6</h1>
+                                <p>Ukraine công bố video bắn cháy xe tăng Nga </p>
+                            </li>
+                            <li>
+                                <h1>7</h1>
+                                <p>Bí ẩn về nguyên nhân vụ nổ sân bay Crimea </p>
+                            </li>
+                            <li>
+                                <h1>8</h1>
+                                <p>Những lần ông Trump bất cẩn với thông tin mật </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="InfographicsB">
+                    <div class="InfographicsB1">
+                        <h3><u>Thăm dò</u></h3>
+                        <h3>Doanh nghiệp gặp khó khăn gì khi thực hiện giảm phát thải khí nhà kính</h3>
+                        <br>
+                        <input type="checkbox">
+                        <label for="">Chưa nhận diện được khó khăn</label>
+                        <br>
+                        <input type="checkbox">
+                        <label for="">Xây dựng lộ trình</label>
+                        <br>
+                        <input type="checkbox">
+                        <label for="">Tiếp cận thông tin cần thiết</label>
+                        <button>Tiếp nhận</button>
+                    </div>
+                    <img src="https://tpc.googlesyndication.com/simgad/14163365379830358076?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4ql9MGgjAhhg6r0lymYC4W4zm21q2Q"
+                        alt="">
+                </div>
+                <div class="InfographicsC">
+                    <ul>
+                        <li>
+                            <img src="https://i1-ngoisao.vnecdn.net/2022/08/14/topboncon1-1660457016-9412-1660458064.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=mnHxlFlwFMkL39b3HX5sCA"
+                                alt="">
+                            <h3>Cuộc đời 4 người con của Nữ hoàng Anh</h3>
+                            <p>Bốn người con của Nữ hoàng Elizabeth II và Hoàng thân Phillip gồm người thừa kế 'nghiện
+                                việc' Charles,Công chúa Anne chăm chỉ ,Edward 'nhạy cảm' và Andrew đầy tai tiếng</p>
+                        </li>
+                        <li>
+                            <img src="https://i1-english.vnecdn.net/2022/08/13/quyn36071657100895167016571935-3325-5853-1660367878.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=0Dj-m8of699Vyg787Aoeag"
+                                alt="">
+                            <h3>Jollibee Foods struggles to make profits in Vietnam with 4 brands</h3>
+                            <p>All four brands that Jollibee Foods Corp of the Philippines operates in Vietnam. operates
+                                in Vietnam. operates in Vietnam. operates in Vietnam.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="enterprise">
+                <h2><u>Thông tin doanh nghiệp</u></h2>
+                <ul>
+                    <li><img src="https://i1-kinhdoanh.vnecdn.net/2022/08/01/image002-1659342311-3181-1659342328.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=kNw2BFzVSKk2NNvPXRE9yw"
+                            alt="">
+                        <p>Sữa Alponte Mum cung cấp dinh dưỡng cho mẹ bầu</p>
+                    </li>
+                    <li>
+                        <img src="https://i1-kinhdoanh.vnecdn.net/2022/08/12/anh1-1660275279-1731-1660292728.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=CfSS17-IfBG9TsnTa4gq8A"
+                            alt="">
+                        <p>Nguồn nhân lực chất lượng cao tạo nên thành công của DatVietVAC</p>
+                    </li>
+                    <li>
+                        <img src="https://i1-kinhdoanh.vnecdn.net/2022/08/12/anh-1-1660299226-7016-1660299268.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=PtCfkBHvKu70eEK8sBgVBQ"
+                            alt="">
+                        <p>VPBank lập kỷ lục với biển quảng cáo in tên hơn 10.000 nhân viên</p>
+                    </li>
+                    <li>
+                        <img src="https://i1-kinhdoanh.vnecdn.net/2022/08/12/hinh-nhan-giai-jpg-1660269080-7442-8559-1660272071.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=H42RSAT4mpRcFBFR8HSfNw"
+                            alt="">
+                        <p>DatVietVAC 3 lần liên tiếp đoạt 'Best Companies to Works for in Asia'</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="synthetic">
+                <ul>
+                    <li>Trang chủ</li>
+                    <li>Video</li>
+                    <li>Postcasts</li>
+                    <li>Ảnh</li>
+                    <li>Infographics</li>
+                    <li>Mới nhất</li>
+                    <li>Xem nhiều</li>
+                    <li>Tin nóng</li>
+                </ul>
+                <ul>
+                    <li>Thời sự</li>
+                    <li>Góc nhìn</li>
+                    <li>Thế giới</li>
+                    <li>Kinh doanh</li>
+                    <li>giải trí</li>
+                </ul>
+                <ul>
+                    <li>Thể thao</li>
+                    <li>Pháp luật</li>
+                    <li>giáo dục</li>
+                    <li>Sức khỏe</li>
+                    <li>Đời sống</li>
+                    <li>Du lịch</li>
+                </ul>
+                <ul>
+                    <li>Khoa học</li>
+                    <li>Số hóa</li>
+                    <li>Xe</li>
+                    <li>ý kiến</li>
+                    <li>Tâm sự</li>
+                    <li>Hài</li>
+                </ul>
+                <ul>
+                    <li>Rao vặt</li>
+                    <li>Startup</li>
+                    <li>Mua ảnh VnExpress</li>
+                    <li>Vhome</li>
+                    <li>eBox</li>
+                    <li>eWork</li>
+                </ul>
+                <div class="wrap-contact">
+                    <div class="contactDownloadapp">
+                        <p>Tải ứng dụng</p>
+                        <a href="">VnExpress</a>
+                        <a href="">International</a>
+                    </div>
+                    <div class="contact clearfix">
+                        <p>Liên hệ</p>
+                        <a class="mail" href="">Toàn soạn</a>
+                        <a class="ads" href="">Quảng cáo</a>
+                        <a class="vlight" href="">Hợp tác bản quyền</a>
+                    </div>
+                    <div class="hotline">
+                        <p>Đường dây nóng</p>
+                        <div class="left">
+                            <strong>083.888.0123</strong>
+                            <p>(Hà Nội)</p>
+                        </div>
+                        <div class="right">
+                            <strong>082.233.3555</strong>
+                            <p>(TP.Hồ Chí Minh)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer">
+                <p>
+                    <strong>Báo Tiếng Việt nhiều người xem nhất</strong>
+                    <br>
+                    Thuộc bộ Khoa học Công nghệ
+                    <br>
+                    Số giấy phép : 548/GP-BTTT ngày 24/08/2021
+                </p>
+                <p>
+                    Tổng biên tập : Phạm Hiếu
+                    <br>
+                    Địa chỉ :Tầng 5 ,Tòa nhà FPT ,17 phố Duy Tân,Cầu giấy,Hà Nội
+                    <br>
+                    Điện thoại: 024 7300 8899 - máy lẻ 4500
+                </p>
+                <p>© 1997-2022. Toàn bộ bản quyền thuộc VnExpress</p>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
